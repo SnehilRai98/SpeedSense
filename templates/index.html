@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Speed Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Internet Speed Test</h1>
+        <button id="startButton">Start Speed Test</button>
+        
+        <div id="results">
+            <div class="card">
+                <h3>Download Speed</h3>
+                <p id="download-result" class="loading">–</p>
+                <small>(8 Mbps = 1 MBps)</small>
+            </div>
+            <div class="card">
+                <h3>Upload Speed</h3>
+                <p id="upload-result" class="loading">–</p>
+                <small>(8 Mbps = 1 MBps)</small>
+            </div>
+            <div class="card">
+                <h3>Ping</h3>
+                <p id="ping-result" class="loading">–</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script> <!-- External JS file -->
+</body>
+</html>

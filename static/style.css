@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1c1c1e; /* Dark background */
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    color: #f5f5f5;
+}
+
+.container {
+    text-align: center;
+    padding: 3rem;
+    width: 100vw;  /* Full screen width */
+    height: 100vh; /* Full screen height */
+}
+
+h1 {
+    font-size: 3rem;
+    color: #e84b4b; /* Header color */
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+button {
+    padding: 1rem 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: #e84b4b; /* Button color */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 2rem;
+}
+
+button:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+#results {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center; /* Center the results horizontally */
+    align-items: stretch; /* Stretch cards to equal height */
+    flex-wrap: wrap;
+    margin-top: 2rem; /* Space between button and results */
+    width: 100%; /* Ensure results use full width */
+}
+
+.card {
+    flex: 1;
+    background-color: #3a3a3c; /* Dark card background */
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    min-width: 250px;
+    max-width: 300px;
+    min-height: 150px; /* Minimum height for uniformity */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #e84b4b; /* Header color for cards */
+    text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+.card p {
+    font-size: 1.5rem;
+    color: #f5f5f5;
+}
+
+.card.small {
+    background-color: #e84b4b; /* Teal color for Ping card */
+}
+
+.card small {
+    font-size: 1rem;
+    color: #a1a1a1;
+}
+
+.loading {
+    font-size: 1.3rem;
+    color: #e84b4b; /* Loading color */
+    animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem; /* Adjust header size for tablets */
+    }
+
+    button {
+        font-size: 1.2rem; /* Smaller button font size */
+        padding: 0.8rem 2rem; /* Adjust button padding */
+    }
+
+    .card {
+        min-width: 200px; /* Adjust min width for cards */
+        max-width: 250px; /* Adjust max width for cards */
+        padding: 1.5rem; /* Adjust padding for cards */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Adjust header size for smartphones */
+    }
+
+    button {
+        font-size: 1rem; /* Smaller button font size */
+        padding: 0.5rem 1.5rem; /* Adjust button padding */
+    }
+
+    #results {
+        flex-direction: column; /* Stack results vertically */
+    }
+
+    .card {
+        width: 100%; /* Full width for cards on small screens */
+        margin-bottom: 1rem; /* Space between cards */
+    }
+}
